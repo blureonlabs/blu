@@ -1,31 +1,31 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Blululu Studios - Tech-First Product & Systems Studio",
-  description: "We build high-tech products, platforms, and systems — the right way. A tech-first studio for founders and businesses.",
-  keywords: ["product studio", "MVP development", "systems automation", "tech consulting", "web development"],
-  authors: [{ name: "Blululu Studios" }],
+  title: "Blululu — AI Native Studio",
+  description: "AI-native storytelling, content, and product studio. We create high-leverage content and build custom AI-powered systems — faster, sharper, without the overhead.",
+  keywords: ["AI studio", "AI native", "brand storytelling", "AI content", "AI automation", "creative studio", "brand films"],
+  authors: [{ name: "Blululu" }],
   openGraph: {
-    title: "Blululu Studios - Tech-First Product & Systems Studio",
-    description: "We build high-tech products, platforms, and systems — the right way.",
+    title: "Blululu — AI Native Studio",
+    description: "AI-native storytelling, content, and product studio.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blululu Studios",
-    description: "Tech-first product and systems studio",
+    title: "Blululu",
+    description: "AI Native Studio. Storytelling, content, and products — powered by AI from the ground up.",
   },
 };
 
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

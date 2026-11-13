@@ -34,15 +34,15 @@ export async function sendContactEmail(data: ContactEmailData) {
       <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 24px 0;" />
 
       <p style="color: #737373; font-size: 14px; margin: 0;">
-        Sent from Blululu Studios contact form
+        Sent from Blululu contact form
       </p>
     </div>
   `;
 
   try {
     const result = await resend.emails.send({
-      from: "Blululu Studios <onboarding@resend.dev>", // Update this with your verified domain
-      to: process.env.CONTACT_EMAIL || "hello@blululu.studio",
+      from: "Blululu <onboarding@resend.dev>", // Update this with your verified domain
+      to: process.env.CONTACT_EMAIL || "hello@blululu.in",
       replyTo: email,
       subject: `New Project Inquiry from ${name}`,
       html: emailContent,

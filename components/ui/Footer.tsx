@@ -6,63 +6,42 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-neutral-200 py-16 lg:py-20">
+    <footer className="bg-[#0a0a0a] border-t border-white/10 py-16 lg:py-20">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Logo & Tagline */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logos/Red Logo.png"
+                src="/logos/White Logo.png"
                 alt={SITE_NAME}
                 width={150}
                 height={50}
                 className="h-12 w-auto"
               />
             </Link>
-            <p className="text-neutral-600 text-sm max-w-xs leading-relaxed">
-              Built different. Shipped right.
+            <p className="text-neutral-500 text-sm max-w-xs leading-relaxed">
+              AI Native Studio
             </p>
           </div>
 
-          {/* Links */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-bold text-blululu-black uppercase tracking-wider">
-              Explore
-            </h3>
-            <div className="space-y-2">
-              <Link
-                href="/principles"
-                className="block text-neutral-600 hover:text-blululu-black transition-colors text-sm font-medium"
-              >
-                Principles
-              </Link>
-              <Link
-                href="/insights"
-                className="block text-neutral-600 hover:text-blululu-black transition-colors text-sm font-medium"
-              >
-                Insights
-              </Link>
-            </div>
-          </div>
-
           {/* Contact & Social */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-bold text-blululu-black uppercase tracking-wider">
+          <div className="space-y-4 md:text-right">
+            <h3 className="text-sm font-bold text-white uppercase tracking-widest">
               Connect
             </h3>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="block text-blululu-black hover:text-blululu-red transition-colors font-semibold text-sm"
+              className="block text-white hover:text-blululu-red transition-colors font-semibold text-sm"
             >
               {CONTACT_EMAIL}
             </a>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-2 md:justify-end">
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-100 hover:bg-blululu-red hover:text-white transition-all rounded-full flex items-center justify-center text-neutral-600"
+                className="w-10 h-10 bg-white/10 hover:bg-blululu-red transition-all rounded-full flex items-center justify-center text-neutral-400 hover:text-white"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +52,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-100 hover:bg-blululu-red hover:text-white transition-all rounded-full flex items-center justify-center text-neutral-600"
+                className="w-10 h-10 bg-white/10 hover:bg-blululu-red transition-all rounded-full flex items-center justify-center text-neutral-400 hover:text-white"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -84,7 +63,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-100 hover:bg-blululu-red hover:text-white transition-all rounded-full flex items-center justify-center text-neutral-600"
+                className="w-10 h-10 bg-white/10 hover:bg-blululu-red transition-all rounded-full flex items-center justify-center text-neutral-400 hover:text-white"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -95,7 +74,7 @@ export default function Footer() {
                 href="https://substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-100 hover:bg-blululu-red transition-all rounded-full flex items-center justify-center overflow-hidden"
+                className="w-10 h-10 bg-white/10 hover:bg-blululu-red transition-all rounded-full flex items-center justify-center overflow-hidden"
                 aria-label="Substack"
               >
                 <Image
@@ -111,9 +90,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-neutral-200">
-          <p className="text-neutral-400 text-sm">
-            © {currentYear} {SITE_NAME}. All rights reserved.
+        <div className="pt-8 border-t border-white/10">
+          <p className="text-neutral-600 text-sm">
+            &copy; {currentYear} {SITE_NAME}. All rights reserved.
           </p>
         </div>
       </div>

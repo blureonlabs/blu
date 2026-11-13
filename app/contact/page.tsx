@@ -50,24 +50,24 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-[#0a0a0a] min-h-screen">
       {/* Hero */}
       <section className="py-20 lg:py-32 px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <FadeIn direction="up">
-            <h1 className="text-5xl lg:text-7xl font-bold text-blululu-black mb-6">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Let&apos;s Talk
             </h1>
           </FadeIn>
           <FadeIn delay={0.2} direction="up">
-            <p className="text-xl lg:text-2xl text-neutral-600 leading-relaxed mb-8">
+            <p className="text-xl lg:text-2xl text-neutral-400 leading-relaxed mb-8">
               Tell us about your project and we&apos;ll get back to you within 24-48 hours.
             </p>
           </FadeIn>
           <FadeIn delay={0.4} direction="up">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="text-xl text-blululu-red hover:text-red-700 font-medium transition-colors"
+              className="text-xl text-blululu-red hover:text-red-500 font-medium transition-colors"
             >
               {CONTACT_EMAIL}
             </a>
@@ -80,7 +80,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto">
           <FadeIn delay={0.3} direction="up">
             {status === "success" ? (
-              <div className="bg-green-50 border-2 border-green-500 rounded-3xl p-12 text-center">
+              <div className="bg-green-900/20 border-2 border-green-500/50 rounded-3xl p-12 text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg
                     className="w-8 h-8 text-white"
@@ -96,10 +96,10 @@ export default function ContactPage() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-3xl font-bold text-blululu-black mb-4">
+                <h2 className="text-3xl font-bold text-white mb-4">
                   Message Sent!
                 </h2>
-                <p className="text-lg text-neutral-600 mb-8">
+                <p className="text-lg text-neutral-400 mb-8">
                   Thank you for reaching out. We&apos;ll review your message and get back to you within 24-48 hours.
                 </p>
                 <Button
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-bold text-blululu-black mb-2 uppercase tracking-wider"
+                    className="block text-sm font-bold text-white mb-2 uppercase tracking-wider"
                   >
                     Name *
                   </label>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 text-lg border-2 border-neutral-200 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 text-lg border-2 border-white/15 bg-white/5 text-white placeholder:text-neutral-500 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors"
                     placeholder="Your name"
                     disabled={status === "loading"}
                   />
@@ -137,7 +137,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-bold text-blululu-black mb-2 uppercase tracking-wider"
+                    className="block text-sm font-bold text-white mb-2 uppercase tracking-wider"
                   >
                     Email *
                   </label>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 text-lg border-2 border-neutral-200 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors"
+                    className="w-full px-6 py-4 text-lg border-2 border-white/15 bg-white/5 text-white placeholder:text-neutral-500 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors"
                     placeholder="your@email.com"
                     disabled={status === "loading"}
                   />
@@ -158,7 +158,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="projectDescription"
-                    className="block text-sm font-bold text-blululu-black mb-2 uppercase tracking-wider"
+                    className="block text-sm font-bold text-white mb-2 uppercase tracking-wider"
                   >
                     Tell us about your project *
                   </label>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     value={formData.projectDescription}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full px-6 py-4 text-lg border-2 border-neutral-200 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors resize-none"
+                    className="w-full px-6 py-4 text-lg border-2 border-white/15 bg-white/5 text-white placeholder:text-neutral-500 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors resize-none"
                     placeholder="What are you building? What challenges are you facing? What are your goals?"
                     disabled={status === "loading"}
                   />
@@ -179,7 +179,7 @@ export default function ContactPage() {
                 <div>
                   <label
                     htmlFor="budgetRange"
-                    className="block text-sm font-bold text-blululu-black mb-2 uppercase tracking-wider"
+                    className="block text-sm font-bold text-white mb-2 uppercase tracking-wider"
                   >
                     Budget Range (Optional)
                   </label>
@@ -188,12 +188,12 @@ export default function ContactPage() {
                     name="budgetRange"
                     value={formData.budgetRange}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 text-lg border-2 border-neutral-200 rounded-2xl focus:border-blululu-red focus:outline-none transition-colors bg-white"
+                    className="w-full px-6 py-4 text-lg border-2 border-white/15 bg-white/5 text-white rounded-2xl focus:border-blululu-red focus:outline-none transition-colors"
                     disabled={status === "loading"}
                   >
-                    <option value="">Select a range</option>
+                    <option value="" className="bg-[#0a0a0a]">Select a range</option>
                     {BUDGET_RANGES.map((range) => (
-                      <option key={range} value={range}>
+                      <option key={range} value={range} className="bg-[#0a0a0a]">
                         {range}
                       </option>
                     ))}
@@ -202,8 +202,8 @@ export default function ContactPage() {
 
                 {/* Error Message */}
                 {status === "error" && (
-                  <div className="p-4 bg-red-50 border-2 border-red-500 rounded-2xl">
-                    <p className="text-red-700 text-center font-medium">
+                  <div className="p-4 bg-red-900/20 border-2 border-red-500/50 rounded-2xl">
+                    <p className="text-red-400 text-center font-medium">
                       {errorMessage}
                     </p>
                   </div>
@@ -233,22 +233,22 @@ export default function ContactPage() {
       </section>
 
       {/* Alternative Contact */}
-      <section className="py-20 lg:py-32 px-6 lg:px-8 bg-neutral-50">
+      <section className="py-20 lg:py-32 px-6 lg:px-8 bg-[#111]">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn direction="up">
-            <h2 className="text-3xl lg:text-4xl font-bold text-blululu-black mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Prefer Email?
             </h2>
           </FadeIn>
           <FadeIn delay={0.2} direction="up">
-            <p className="text-lg text-neutral-600 mb-8">
+            <p className="text-lg text-neutral-400 mb-8">
               You can also reach us directly at:
             </p>
           </FadeIn>
           <FadeIn delay={0.4} direction="up">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-block text-2xl lg:text-3xl font-bold text-blululu-red hover:text-red-700 transition-colors"
+              className="inline-block text-2xl lg:text-3xl font-bold text-blululu-red hover:text-red-500 transition-colors"
             >
               {CONTACT_EMAIL}
             </a>

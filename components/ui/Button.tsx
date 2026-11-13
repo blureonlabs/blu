@@ -27,12 +27,12 @@ export default function Button({
   disabled,
   type = "button",
 }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variantStyles = {
-    primary: "bg-blululu-red text-blululu-white hover:bg-red-600 focus:ring-blululu-red shadow-lg shadow-blululu-red/30 hover:shadow-xl hover:shadow-blululu-red/40",
-    secondary: "bg-blululu-black text-blululu-white hover:bg-neutral-800 focus:ring-blululu-black shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-black/30",
-    outline: "border-2 border-blululu-black text-blululu-black hover:bg-blululu-black hover:text-blululu-white focus:ring-blululu-black shadow-md hover:shadow-lg",
+    primary: "bg-blululu-red text-white hover:bg-red-600 focus:ring-blululu-red shadow-lg shadow-blululu-red/25 hover:shadow-xl hover:shadow-blululu-red/40",
+    secondary: "bg-white text-[#0a0a0a] hover:bg-neutral-200 focus:ring-white shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20",
+    outline: "border-2 border-white/30 text-white hover:bg-white hover:text-[#0a0a0a] focus:ring-white shadow-md hover:shadow-lg",
   };
 
   const sizeStyles = {

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #0a0a0a;
+  --foreground: #fafafa;
   --blululu-red: #ea0737;
   --blululu-black: #0a0a0a;
-  --blululu-white: #ffffff;
+  --blululu-white: #fafafa;
 }
 
 @theme inline {
@@ -31,7 +31,7 @@
   --color-neutral-900: #171717;
 
   /* Typography */
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-space-grotesk);
 
   /* Border Radius */
   --radius-sm: 0.5rem;
@@ -41,15 +41,15 @@
   --radius-2xl: 3rem;
   --radius-full: 9999px;
 
-  /* Spacing Scale (generous for Framer-style) */
-  --spacing-section: 5rem;
-  --spacing-section-lg: 8rem;
+  /* Spacing Scale */
+  --spacing-section: 6rem;
+  --spacing-section-lg: 10rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-space-grotesk), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -61,16 +61,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--neutral-100);
+  background: #111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--neutral-400);
+  background: #333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neutral-500);
+  background: #555;
 }
 
 /* Selection */
@@ -82,6 +82,7 @@ body {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 /* Custom animations */
